@@ -63,7 +63,7 @@ export const authApi = apiSlice.injectEndpoints({
             })
           );
         } catch (error: any) {
-          console.log("login error");
+          console.log(process.env.NEXT_PUBLIC_SERVER_URI);
         }
       },
     }),
@@ -116,4 +116,4 @@ export const {
   useLoginMutation,
   useSocialAuthMutation,
   useLogoutQuery,
-} = authApi;
+}=authApi;
